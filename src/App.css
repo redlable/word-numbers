@@ -1,0 +1,77 @@
+.App {
+  align-items: center;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.thumb-up {
+  background: #000 url("./thumbs-up.svg") center no-repeat;
+  background-size: contain;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.number {
+  align-items: center;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-basis: 60%;
+  font-size: 24vh;
+  width: 100%;
+}
+
+.word {
+  align-items: center;
+  display: flex;
+  flex-basis: 40%;
+  font-size: 22vh;
+  justify-content: center;
+  width: 100%;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+}
+
+ol {
+  display: flex;
+  flex-wrap: wrap;
+  counter-reset: list;
+  margin: 0;
+  padding: 0;
+  max-width: 50vw;
+}
+
+li {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 50px 10px 10px;
+  position: relative;
+  height: 150px;
+  width: 95px;
+}
+
+li:before {
+  counter-increment: list;
+  content: counter(list);
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+svg {
+  max-width: 100%;
+}
